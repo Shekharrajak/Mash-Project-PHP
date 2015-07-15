@@ -29,11 +29,31 @@ class Welcome extends CI_Controller {
 	}*/
 		//$this->load->view('pages/home.php');
 //	}
+		
+
+	function __construct(){
+			parent::__construct();
+			$this->load->helper('url');
+			$this->load->model('press_model');
+
+		}
+
 		public function index ()
 	{
 	//	if(!file_exists('application/views/pages/'.$page.'php')){
 	//		show_404();
 	//	}
-		$this->load->view('pages/home.php');
+		
+		$data['title'] = "Mash Project";
+		$data['size'] = 6;
+		$this->load->helper('url');
+		$data['results'] = $this->press_model->get_press(2);
+
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('templates/nav.php',$data);
+		$this->load->view('pages/home.php',$data);
+		$this->load->view('templates/press.php',$data ,$size);
+		$this->load->view('templates/footer.php',$data);
+		//$this->load->view('pages/Contributors.php');
 	}
 }
