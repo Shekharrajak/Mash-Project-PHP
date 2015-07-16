@@ -1254,7 +1254,7 @@ App Developer: Android/iOS.
                 foreach ($results as $item) :
 
                      extract($item);
-                // include('templates/press.php');
+                // include 'templates/press.php';
                   include 'C:\xampp1\htdocs\mash_spr\application\views\templates\press.php';
                  endforeach
                 ?>

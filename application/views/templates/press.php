@@ -11,9 +11,9 @@
                     </p>
          </div> -->
             
-          <div class="col-xs-<?= $size ?> wow fadeInLeft">
+          <div class="col-xs-6 wow fadeInLeft">
             <div class="modal-body">
-                            <h4><?= $press_title ?></h4>
+                            <h4><?php echo $press_title ?></h4>
                             <hr>
                             <img src="<?= $press_thumb ?>" class="img-responsive img-centered" alt="" style="padding-bottom:10px">
                             <h6 class="text-faded" style="color:#000; text-align:center; white-space:!important; font-stretch:expanded">
